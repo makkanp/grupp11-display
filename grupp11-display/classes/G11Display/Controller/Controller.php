@@ -21,7 +21,6 @@ class Controller
         $this->messageDAO->createNewMessage($message);
     }
 
-
     public function getMessage(){
 
         return $this->messageDAO->getMessage();
