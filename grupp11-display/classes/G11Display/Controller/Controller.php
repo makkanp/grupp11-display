@@ -18,13 +18,12 @@ class Controller
 
     public function createNewMessage($message){
 
-
-        return $this->messageDAO->createNewMessage($message);
+        $this->messageDAO->createNewMessage($message);
     }
 
 
-    public function getMessage($message){
+    public function getMessage(){
 
-        return $this->messageDAO->getMessage($message);
+        return $this->messageDAO->getMessage();
     }
 }

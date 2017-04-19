@@ -32,10 +32,7 @@ class MessageDAO  {
             if ($this->mysqli->affected_rows != 1){
                 die("Misslyckades med insättning av värde");
             }
-
-
         }
-
 
     public function getMessage()    {
         $sql = "SELECT * 
