@@ -25,8 +25,8 @@ class NewMessage extends AbstractRequestHandler
 
         $this->submitted = $submitted;
 
-        if(isset ($_POST['submit'])){
-            $this->submitted = $_POST['submitted '];
+        if(isset ($_POST['commentSubmit'])){
+            $this->submitted = $_POST['submitted'];
 
         }
         //värdet av submit knappen, boolean om submit har tryckts =$submit
