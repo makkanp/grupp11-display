@@ -6,22 +6,45 @@
  * Date: 2017-04-18
  * Time: 14:35
  */
-class MessageDAO
-{
+class MessageDAO {
     private $dbobj;
     private $db;
     private $display;
 
-    public function __construct($display)
-    {
-        $this->dbobj = new DB();
+    public function __construct($display)    {
+        $this->dbobj = new DBinfo();
         $this->db = $this->dbobj->getDB();
         $this->recipe = $display;
+    }
+
+    public function createNewMessage($message) {
+
+       // if(!(ctype_print($message))) //bör kanske ligga i view eller controller???
+        //    return ['error' => 'Invalid message'];
+
+        $stmt = $this->db->prepare("INSERT INTO messages (message) VALUES (?)");
+        $stmt->bind_param("s", $message);
+        $stmt->execute();
+    }
+
+    public function getMessage()    {
+        $sql = "SELECT * 
+                FROM display 
+                ORDER BY cid DESC";
+        $result = $this->db->query($sql);
+
+        return $result;
+        // while
+    }
+
+    public function __destruct()
+    {
+        close();
     }
 }
 
 
-class db
+class DBinfo
 {
     private static $host = '127.0.0.1';
     private static $username = 'root';
@@ -38,7 +61,7 @@ class db
             throw new Exception($this->mysqli->error);
     }
 
-    public function getDB(){
+    public function getConnection(){
         return $this->mysqli;
     }
 }
