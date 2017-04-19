@@ -18,7 +18,7 @@ session_start();
         </ul>
     </div>
     <p id="welcome">Välkommen!</p>
-    <a id="achange" href="change.php">Change message</a>
+    <a id="achange" href="admin.php">Change message</a>
     <div id="txt"></div>
 </div>
 

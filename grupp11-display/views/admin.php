@@ -23,7 +23,7 @@ session_start();
                 </div>
             </form>
         </div>
-        <a id="achange2" href="start.php">Back to message</a>
+        <a id="achange2" href="message.php">Back to message</a>
     </div>
 
 </div>
