@@ -1,0 +1,390 @@
+body{
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+h1 {
+	display: block;
+	font-size: 2em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+	color: brown;
+}
+
+h2 {
+	display: block;
+	font-size: 1.5em;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+	margin-left: 0;
+   	margin-right: 0;
+	font-weight: bold;
+	color: brown;
+}
+
+h3 {
+	display: block;
+    font-size: 1.17em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	color: brown;
+}
+
+div {
+	display: block;
+}
+
+li {
+    display: list-item;
+}
+
+ul { 
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+}
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body { 
+    display: block;
+    margin: 8px;
+}
+
+body:focus { 
+    outline: none;
+}
+
+
+i {
+	font-size: 14px;
+}
+
+
+
+/* test för login*/
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	border-radius:4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	border-radius:4px;
+}
+
+
+
+
+/* Test för comments */
+
+
+textarea {
+	width: 440px;
+	height: 40px;
+	background-color: #fff;
+	resize: none;
+	float:left;
+}
+
+
+.comment-box {
+	width: 430px;
+	padding: 5px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+	background-color: lightgrey;
+	border-radius: 4px;
+}
+
+.comment-box p {
+	font-family: arial;
+	font-size: 14px;
+	line-height: 16px;
+	color: #282828;
+	font-weight: 100;
+}
+
+
+.delete-form {
+	position: relative;
+	top: -60px;
+	left: 380px;
+}
+
+.delete-form button {
+	width: 40px;
+	height: 20px;
+	color: #282828;
+	background-color: lightgrey;
+	opacity: 0.7;
+	padding: 0;
+	margin: 0;
+}
+
+.delete-form button:hover {
+	opacity: 1;
+}
+
+.kommentarer {
+	position:absolute;
+	top: 410px;
+	width: 450px;
+    height: 100px;
+	left: 420px;	
+}
+
+.kommentarer2 {
+	position:absolute;
+	top: 515px;
+	width: 450px;
+    height: 240px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+	left: 420px;
+		
+}
+
+.formen2 {
+    border: 0;
+	width: 300px;
+ 	float: left;
+	border-radius:8px;
+}
+
+.knappen {
+	width: 150px;
+}
+
+
+
+/* Javascript kommentarer*/
+
+.wrapper {
+	background-color:white;
+	width: 400px;
+	margin: 0 auto 0 auto;
+	height: 440px;
+	border-radius:8px;
+	position: absolute;
+	top: 0;/*335*/
+	left: 0;/*412*/
+	z-index: -1;
+}
+
+
+.comment-wrapper {
+	position: absolute;
+	top: 300px;
+	margin: 0;
+	border: 1px solid black;
+	height: 105px;
+	width: auto;
+	color: black;
+	background: lightgrey;
+	border-radius:8px;
+}
+
+.comment-wrapper2 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	margin: 0;
+	border: 1px solid black;
+	height: 105px;
+	width: auto;
+	color: black;
+	background: lightgrey;
+	border-radius:8px;
+}
+
+h3.comment-title {
+	height: 0;
+	line-height: 37px;
+	font-size: 14px;
+	margin: 0 5px 0 5px;
+  }
+
+.comments-list {
+	height: auto;
+	font-size: 13px;
+	margin: 0 0 0 0;
+	color: black;
+	border-radius:8px;
+}
+
+ul.comments-holder-ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 320px;
+	height: 240px;
+	overflow: hidden;
+	border-radius:8px;
+	position: absolute;
+	top: 0;
+}
+
+ul.comments-holder-ul li.comment-holder {
+	background: white;
+	list-style-type: none;
+	height: 230px;
+	width: 305px;
+	margin: 5px 5px 5px 5px;
+	border: 1px solid black;
+	overflow: hidden;
+	border-radius:8px;
+}
+
+ul.comments-holder-ul li.comment-holder:hover {
+
+}
+
+ul.comments-holder-ul li.comment-holder .user-img {
+	float: left;
+	height: 65px;
+	width: 65px;
+	background: grey;
+	margin: 0 10px 0 0;
+	border-radius:8px;
+}
+
+ul.comments-holder-ul li.comment-holder h3.username-field {
+	height: 30px;
+	line-height: 27px;
+	color: brown;
+	font-size: 14px;
+	margin: 0 0 0 10px;
+	border-radius:8px;
+}
+
+.comment-body {
+	width: auto;
+	border-radius:8px;
+}
+
+ul.comments-holder-ul li.comment-holder .comment-text {
+	display: block;
+	width: 290px;
+	font-size: 20px;
+	margin: 0 0 10px 10px;
+	overflow-y: hidden;
+	overflow-x:hidden;
+	height: 180px;
+}
+
+ul.comments-holder-ul li.comment-holder:hover .comment-buttons-holder {
+	display: block;
+	height: 0;
+}
+
+.comment-buttons-holder {
+	display: none;
+	position: relative;
+	right: 10px;
+	height: 10px;
+}
+
+.comment-buttons-holder ul{
+	list-style-type: none;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	margin-top: 0;
+
+}
+
+.comment-buttons-holder ul li {
+	float: right;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	color: white;
+	background: #ec0000;
+	cursor: pointer;
+	border-radius:4px;
+	line-height: 20px;
+	margin: 5px;
+}
+
+.comment-buttons-holder ul li:hover {
+	color: black;
+	background: red;
+}
+.comment-insert{
+	height: 70px;
+	width: auto;
+	margin: 10px;
+
+}
+
+
+
+.knappenjava {
+	position: relative;
+	top: -5px;
+}
+
+
+#comment-post-text {
+	width: 350px;
+}
+
+#txt {
+	position: absolute;
+	top: 220px;
+	left: 130px;
+}
+
+#achange {
+	position: absolute;
+	top: 300px;
+	left: 10px;
+}
+
+#achange2 {
+	position: absolute;
+	top: 120px;
+}
+
+#welcome {
+	position: absolute;
+	top: 36px;
+	left: 15px;
+	font-size: 45px;
+	z-index: -1;
+}
+
+
+
+
+
+
+
