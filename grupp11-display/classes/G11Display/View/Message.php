@@ -3,7 +3,7 @@
 namespace G11Display\View;
 
 use Id1354fw\View\AbstractRequestHandler;
-use G11Display\View\Controller;
+use G11Display\Controller\Controller;
 
 class Message extends AbstractRequestHandler {
 
@@ -11,7 +11,16 @@ class Message extends AbstractRequestHandler {
 
         $controller = new Controller();
         $message = $controller->getMessage();
-        $this->addVariable("message", $message);
+
+        if ($message != NULL){
+            $this->addVariable("message", $message);
+        }
+
+        else{
+            $this->addVariable("message", "Inga meddelanden");
+
+        }
+
 
 
         return "message";

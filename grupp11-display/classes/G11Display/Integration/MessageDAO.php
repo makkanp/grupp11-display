@@ -6,6 +6,8 @@
  * Date: 2017-04-18
  * Time: 14:35
  */
+namespace G11Display\Integration;
+
 use G11Display\Integration\DBinfo as DBI;
 class MessageDAO  {
 
@@ -13,7 +15,7 @@ class MessageDAO  {
 
     public function __construct(){
         if($this->mysqli == null)
-            $this->mysqli = new mysqli(DBI::HOST, DBI::USERNAME, DBI::PASSWORD, DBI::DB);
+            $this->mysqli = new \mysqli(DBI::HOST, DBI::USERNAME, DBI::PASSWORD, DBI::DB);
 
         if ($this->mysqli->error)
             throw new Exception($this->mysqli->error);
@@ -24,7 +26,7 @@ class MessageDAO  {
        // if(!(ctype_print($message))) //bör kanske ligga i view eller controller???
         //    return ['error' => 'Invalid message'];
 
-        $stmt = $this->mysqli->prepare("INSERT INTO messages ($message) VALUES (?)");
+        $stmt = $this->mysqli->prepare("INSERT INTO messages (message) VALUES (?)");
         $stmt->bind_param("s", $message);
         $stmt->execute();
 
@@ -36,17 +38,20 @@ class MessageDAO  {
 
     public function getMessage()    {
         $sql = "SELECT * 
-                FROM display 
+                FROM messages 
                 ORDER BY cid DESC";
         $result = $this->mysqli->query($sql);
 
-        if($result == false) {
-            die("Result är tomt");
+
+        if($result) {
+           // die("Result är tomt");
+            $row = $result->fetch_row();
+            return $row[1];
         }
         //while (($row = $result->fetch_row()) != NULL)
-        $row = $result->fetch_row();
 
-        return $row[1];
+        return NULL;
+
     }
 
     public function __destruct()

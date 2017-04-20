@@ -8,7 +8,7 @@ use G11Display\Util\Util;
 class DefaultRequestHandler extends AbstractRequestHandler {
 
     protected function doExecute() {
-        Util::redirect("<Absolute name of ViewClass goes here");
+        Util::redirect("/grupp11-display/G11Display/View/Message");
     }
 
 }
