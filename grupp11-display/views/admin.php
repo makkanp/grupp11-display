@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +9,9 @@ session_start();
 <div class="wrapper">
     <div class="comment-wrapper2">
         <div class="comment-insert">
-            <form method="POST" action="">
+            <form method="POST" action="NewMessage">
                 <div class="comment-insert-container">
-                    <textarea id="comment-post-text" class="comment-insert-text"></textarea>
+                    <textarea id="comment-post-text" class="comment-insert-text" name="message"></textarea>
                 </div>
 
                 <div id='comment-post-btn' class='comment-post-btn-wrapper'>
