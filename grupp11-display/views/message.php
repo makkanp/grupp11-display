@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +9,13 @@ session_start();
 <body onload="startTime()">
 <div class="wrapper">
     <div class="comments-list">
-        <ul class="comments-holder-ul">
-            <!-- Hämta kommentarer -->
-        </ul>
+        <?php
+            if (isset($message)){
+                echo "<p>{$message}</p>";
+            }
+        ?>
+        <!--<ul class="comments-holder-ul">
+        </ul> -->
     </div>
     <p id="welcome">Välkommen!</p>
     <a id="achange" href="admin.php">Change message</a>
