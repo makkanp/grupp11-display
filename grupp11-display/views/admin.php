@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../resources/stylesheets/reset.css">
-    <link rel="stylesheet" href="../resources/stylesheets/styles.css">
+    <link rel="stylesheet" href="../../resources/stylesheets/reset.css">
+    <link rel="stylesheet" href="../../resources/stylesheets/styles.css">
     <title>Change</title>
 </head>
 <body>
@@ -15,11 +15,11 @@
                 </div>
 
                 <div id='comment-post-btn' class='comment-post-btn-wrapper'>
-                    <button class='knappenjava' type='submit' name='commentSubmit'>Comment</button>
+                    <button class='knappenjava' type='submit' name='submit'>Comment</button>
                 </div>
             </form>
         </div>
-        <a id="achange2" href="message.php">Back to message</a>
+        <a id="achange2" href="Message">Back to message</a>
     </div>
 
 </div>

@@ -21,14 +21,11 @@ class NewMessage extends AbstractRequestHandler
         $this->message = $message;
     }
 
-    public function setSubmitted($submitted){
+    public function setSubmit($submitted){
 
         $this->submitted = $submitted;
 
-        if(isset ($_POST['submit'])){
-            $this->submitted = $_POST['submitted '];
 
-        }
         //värdet av submit knappen, boolean om submit har tryckts =$submit
     }
 
@@ -48,7 +45,7 @@ class NewMessage extends AbstractRequestHandler
         $controller = new Controller();
         $controller->createNewMessage($this->message);
 
-        Util::redirect(\G11Display\View\Message);
+        Util::redirect("/grupp11-display/G11Display/View/Message");
         return;
     }
 

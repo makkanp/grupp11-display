@@ -7,7 +7,8 @@
  * Time: 16:24
  */
 
-
+namespace G11Display\Controller;
+use G11Display\Integration\MessageDAO;
 class Controller
 {
     private $messageDAO;

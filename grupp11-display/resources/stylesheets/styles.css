@@ -63,7 +63,7 @@ p {
 
 body { 
     display: block;
-    margin: 8px;
+    margin: 0px;
 }
 
 body:focus { 
@@ -233,11 +233,26 @@ h3.comment-title {
   }
 
 .comments-list {
-	height: auto;
-	font-size: 13px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 305px;
+	height: 225px;
+	border: 1px solid black;
 	margin: 0 0 0 0;
 	color: black;
 	border-radius:8px;
+}
+#read {
+	margin: 0;
+	padding: 0;
+	width: 290px;
+	height: 185px;
+	overflow: auto;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	font-size: 28px;
 }
 
 ul.comments-holder-ul {
