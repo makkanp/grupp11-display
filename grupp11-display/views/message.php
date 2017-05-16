@@ -14,8 +14,6 @@
                 echo "<div id='read'>{$message}</div>";
             }
         ?>
-        <!--<ul class="comments-holder-ul">
-        </ul> -->
     </div>
     <a id="achange" href="Admin">Change message</a>
     <div id="txt"></div>
