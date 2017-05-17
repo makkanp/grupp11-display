@@ -26,6 +26,10 @@ SET time_zone = "+00:00";
 -- Tabellstruktur `messages`
 --
 
+CREATE DATABASE II1302;
+
+USE II1302;
+
 CREATE TABLE `messages` (
   `cid` int(11) NOT NULL,
   `message` text
